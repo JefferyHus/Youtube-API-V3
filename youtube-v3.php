@@ -46,8 +46,7 @@
 		foreach ($video_filer['items'] as $video) {
 			if (isset($video['id'])) {
 				$date = new DateTime($video['snippet']['publishedAt']);
-				$date->add(new DateInterval($video['contentDetails']['duration']));
-				$time = $date->format('H:i:s');
+				$time = covtime($video['contentDetails']['duration']);
 				//convert the date
 				$video_date = date_format($date , 'd/m/y');
 				//create the video list details
