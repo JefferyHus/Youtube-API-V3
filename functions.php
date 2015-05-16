@@ -101,4 +101,15 @@ function short_text_out($text, $words_count) {
 	return strip_tags($text);
 }
 
+/**
+ * 	Return the youtube video duration
+ *	@param $youtube_time
+ *	@return time
+ */
+function covtime($youtube_time){
+	$start = new DateTime('@0'); // Unix epoch
+	$start->add(new DateInterval($youtube_time));
+	return $start->format('H:i:s');
+} 
+
 ?>
