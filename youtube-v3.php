@@ -41,7 +41,7 @@
 		//create the second Youtube endpoint URL
 		$video_url = 'https://www.googleapis.com/youtube/v3/videos?part=snippet%2Cstatistics%2CcontentDetails&id='.$IDurl.'&key='.$cc_key;
 		$video_filer = json_decode(file_get_contents($video_url),true);
-
+		
 		//Store each video details to data
 		foreach ($video_filer['items'] as $video) {
 			if (isset($video['id'])) {
