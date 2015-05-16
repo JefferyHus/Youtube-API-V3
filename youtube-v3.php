@@ -2,7 +2,7 @@
 	require 'functions.php';
 	if(isset($_GET['query'])){
 		$query = $_GET['query'];
-		$cc_key = 'Your Key';
+		$cc_key = 'YourKey';
 		$url = 'https://www.googleapis.com/youtube/v3/search?part=id&q='.$query.'&maxResults=50&key='.$cc_key;
 		$filer = json_decode(file_get_contents($url),true);
 
